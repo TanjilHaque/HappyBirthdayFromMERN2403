@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Taufik Islam Sir!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(-10%);
+      }
+      50% {
+        transform: translateY(0);
+      }
+    }
+
+    .animate-bounce {
+      animation: bounce 1.5s infinite;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-pink-500 min-h-screen flex items-center justify-center text-white">
+  <div class="text-center space-y-10">
+    <!-- Hero Section -->
+    <div>
+      <h1 class="text-6xl font-bold animate-bounce">Happy Birthday!</h1>
+      <p class="text-xl mt-2">Wishing you an incredible day, Taufik Islam Sir!</p>
+    </div>
+
+    <!-- Greeting Section -->
+    <div class="bg-white text-purple-700 rounded-lg shadow-lg p-8 space-y-4">
+      <h2 class="text-4xl font-bold">A Special Note</h2>
+      <p class="text-lg">Thank you for being an amazing mentor. Your guidance and support inspire us every day. May this year bring you endless joy and success!</p>
+    </div>
+
+    <!-- Interactive Card -->
+    <div>
+      <button id="openCard" class="bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-110">Open Your Birthday Card</button>
+      <div id="card" class="hidden mt-5 bg-white text-purple-700 rounded-lg shadow-lg p-8">
+        <h3 class="text-3xl font-bold">Surprise! 🎉</h3>
+        <p class="text-lg">Here’s to another year of great achievements and happiness!</p>
+        <audio id="birthdaySong" src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3"></audio>
+        <button id="playMusic" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4">Play Music</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const openCardButton = document.getElementById('openCard');
+    const card = document.getElementById('card');
+    const playMusicButton = document.getElementById('playMusic');
+    const birthdaySong = document.getElementById('birthdaySong');
+
+    openCardButton.addEventListener('click', () => {
+      card.classList.toggle('hidden');
+    });
+
+    playMusicButton.addEventListener('click', () => {
+      birthdaySong.play();
+    });
+  </script>
+</body>
+</html>
